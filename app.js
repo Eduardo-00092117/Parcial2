@@ -4,14 +4,26 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const  session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const {mongodb} = require('./configs/keys');
 
 var app = express();
+require('./configs/database');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+
+app.use(session({
+  secret:"Hello world",
+  resave: true, 
+  saveUninitialized: true,
+  store: new MongoStore({url: mongodb.URI, autoReconnect: true})
+}))
 
 app.use(logger('dev'));
 app.use(express.json());

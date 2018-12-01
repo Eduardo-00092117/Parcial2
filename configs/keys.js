@@ -1,5 +1,5 @@
 module.exports={
     mongodb:{
-        URI = "mongodb://localhost:270017/navegadores"
+        URI:'mongodb://localhost:27017/navegadores'
     }
 }
