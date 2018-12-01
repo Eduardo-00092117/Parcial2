@@ -3,8 +3,11 @@ extends layout
 block content
   .container
     .titulo
-      i.material-icons add
-      h5 Administrador de Navegadores web 
+      .row
+        .col.s1
+          i.medium.material-icons beach_access
+        .col.s9
+          h5 Administrador de Navegadores web 
     form(action="/api/Navegadores_web", method='POST')
       .row
         .input-field.col.s2

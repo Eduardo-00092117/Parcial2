@@ -28,7 +28,7 @@ NavegadorController.eliminar = async function (req, res, next) {
 }
 
 NavegadorController.modificar = async function (req, res, next) {
-    let id = req.params.id;
+    let {id} = req.params;
     let nav = {
         nombre: req.body.nombre,
         compania: req.body.compania,
