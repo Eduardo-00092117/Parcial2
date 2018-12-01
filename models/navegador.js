@@ -1,13 +1,14 @@
-const moogose = require('mongoose');
-
-const {Schema} = moogose;
+const moongose = require('mongoose'); 
+const {Schema} = moongose;
 const UserSchema = new Schema(
     {
         nombre: {type: String, required: true},
-        Compañia: {type: String, required: true},
-        Annio: {type: Date, required: true}
+        compania: {type: String, required: true},
+        annio: {type: String, required: true}
     }
 )
 
-module.exports = UserSchema;
+let user = moongose.model('info', UserSchema)
+
+module.exports = user;
 
