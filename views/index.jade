@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  .center-align
-    h1 Administrador
+  .container
+    .titulo
+      i.material-icons add
+      h5 Administrador de Navegadores web 
+    form(action="", method='POST')
+      .row
+        .input-field.col.s2
+          input(type="text", name='nombre', placeholder='nombre')
+        .input-field.col.s2
+          input(type="text", name='compania', placeholder='Compañia')
+        .input-field.col.s2
+          input(type="date", name='annio', placeholder='Año')
+        .input-field.col.s4
+          input.waves-effect.waves-light.btn(type="submit", value='Guardar')
+    table
+      thead
+        tr
+          th Id
+          th Nombre
+          th Compañia
+          th Año
+      tbody#fila

@@ -1,4 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const UserController = require('../controllers/navegadorControllers');
+const NavegadorController = require('../controllers/navegadorControllers');
 const user = require('../models/users');
+
+module.exports = NavegadorController;
