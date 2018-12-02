@@ -43,8 +43,10 @@ NavegadorController.modificar = async function (req, res, next) {
     console.log(navegador);
 }
 
-
-
+NavegadorController.mostrarTodos = async function (req, res, next) {
+    let user = await User.find();
+    return res.status(200).json(user);
+}
 
 
 

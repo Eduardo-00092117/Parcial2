@@ -16,3 +16,12 @@ form{
   background-color: rgb(250, 250, 250);
   padding: 20px;
 }
+
+thead{
+  background-color: #42a5f5;
+  border: 1px solid black;
+}
+
+thead > tr > th{
+  border: 1px solid black;
+}

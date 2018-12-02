@@ -8,4 +8,6 @@ router.delete('/Navegadores_web/:id', NavegadorController.eliminar);
 
 router.put('/Navegadores_web/:id', NavegadorController.modificar);
 
+router.get('/Navegadores_web', NavegadorController.mostrarTodos);
+
 module.exports = router;
