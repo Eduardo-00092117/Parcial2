@@ -8,15 +8,15 @@ block content
           i.medium.material-icons beach_access
         .col.s9
           h5 Administrador de Navegadores web 
-    form(action="/api/Navegadores_web", method='POST')
+    form(action="/api/Navegadores_web", method='POST').center-align
       .row
-        .input-field.col.s2
+        .input-field.col.s4
           input(type="text", name='nombre', placeholder='Nombre')
-        .input-field.col.s2
+        .input-field.col.s4
           input(type="text", name='compania', placeholder='Compañia')
         .input-field.col.s2
           input(type="date", name='annio', placeholder='Año')
-        .input-field.col.s4
+        .input-field.col.s2
           input.waves-effect.waves-light.btn(type="submit", value='Guardar')
     table
       thead
